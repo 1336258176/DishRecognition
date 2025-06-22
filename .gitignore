@@ -1,5 +1,6 @@
-__pycache__
-.vscode
-model
-train
+__pycache__/
+.vscode/
+model/
+train/
 菜品识别系统.pptx
+PPT/
