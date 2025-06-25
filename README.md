@@ -1,6 +1,6 @@
 # 🍽️ Interactive Dish Recognition System
 
-A Streamlit-based web application for automatic Japanese dish identification using deep learning models.
+A Streamlit-based web application for automatic Japanese dish identification using YOLOv5 deep learning models.
 
 ## 🚀 Features
 
@@ -26,7 +26,7 @@ The system can recognize 100 different Japanese dishes including:
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/1336258176/DishRecognition.git
    cd DishRecognition
    ```
 
@@ -75,6 +75,10 @@ The system can recognize 100 different Japanese dishes including:
 
 ## 🏗️ Architecture
 
+<div align="center">
+  <img src="./assets/菜品识别.png" alt="图片描述" width="80">
+</div>
+
 ```
 app.py                 # Main Streamlit application
 ├── load_model()       # Cached model loading
@@ -98,62 +102,3 @@ config.py             # Configuration management
 - `model/UECFOOD100/UECFOOD100.yaml`: Class names and model metadata
 - `requirements.txt`: Python dependencies
 - `config.py`: Application configuration
-
-## 📈 Key Improvements
-
-### Performance
-- **50-80% faster** model loading with caching
-- **Reduced memory usage** through efficient state management
-- **Better error handling** prevents crashes
-
-### Code Quality
-- **Modular design** with separated concerns
-- **Type hints** for better code documentation
-- **Comprehensive logging** for debugging
-- **Clean architecture** with reusable components
-
-### User Experience
-- **Improved UI/UX** with icons and better layout
-- **Real-time feedback** with progress indicators
-- **Detailed statistics** in results display
-- **Better error messages** and guidance
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-1. **Model not loading**
-   - Check if ONNX files exist in `model/` directory
-   - Verify file permissions and paths
-
-2. **Class names not displaying**
-   - Ensure `UECFOOD100.yaml` exists in `model/UECFOOD100/`
-   - Application will fall back to default classes if config missing
-
-3. **Image upload fails**
-   - Check image format (PNG, JPG, JPEG only)
-   - Verify file size is reasonable
-
-4. **Performance issues**
-   - Try using yolov5s instead of yolov5l for faster inference
-   - Reduce image resolution if needed
-
-## 📝 Development
-
-### Code Style
-- Follow PEP 8 guidelines
-- Use type hints where possible
-- Add docstrings for functions
-- Keep functions focused and small
-
-## 📄 License
-
-This project is for educational and research purposes.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
